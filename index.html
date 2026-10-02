@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pani Puri Corner</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <h1 class="logo">🥣 Pani Puri Corner</h1>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-buttons">
+                <!-- Cart button -->
+                <button id="cartButton" class="cart-button">
+                    🛒 Cart (<span id="cartCount">0</span>)
+                </button>
+
+                <!-- Dark/Light mode -->
+                <button id="themeButton" class="theme-button">🌙</button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO</p>
+
+            <h2>Pani Puri Corner</h2>
+
+            <p>
+                Crispy, Spicy & Delicious!
+            </p>
+
+            <button id="orderNowButton" class="main-button">
+                Order Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+
+        <h2 class="section-title">Our Menu</h2>
+
+        <p class="section-description">
+            Freshly prepared street-food favorites for you!
+        </p>
+
+        <div class="food-container">
+
+            <!-- Food Card 1 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+                    alt="Classic Pani Puri"
+                >
+
+                <div class="food-info">
+                    <h3>Classic Pani Puri</h3>
+                    <p class="price">₹30</p>
+
+                    <button
+                        class="add-button"
+                        onclick="addToCart('Classic Pani Puri', 30)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Food Card 2 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=80"
+                    alt="Masala Pani Puri"
+                >
+
+                <div class="food-info">
+                    <h3>Masala Pani Puri</h3>
+                    <p class="price">₹40</p>
+
+                    <button
+                        class="add-button"
+                        onclick="addToCart('Masala Pani Puri', 40)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Food Card 3 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+                    alt="Sweet Pani Puri"
+                >
+
+                <div class="food-info">
+                    <h3>Sweet Pani Puri</h3>
+                    <p class="price">₹40</p>
+
+                    <button
+                        class="add-button"
+                        onclick="addToCart('Sweet Pani Puri', 40)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Food Card 4 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=80"
+                    alt="Dahi Puri"
+                >
+
+                <div class="food-info">
+                    <h3>Dahi Puri</h3>
+                    <p class="price">₹50</p>
+
+                    <button
+                        class="add-button"
+                        onclick="addToCart('Dahi Puri', 50)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Food Card 5 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+                    alt="Sev Puri"
+                >
+
+                <div class="food-info">
+                    <h3>Sev Puri</h3>
+                    <p class="price">₹50</p>
+
+                    <button
+                        class="add-button"
+                        onclick="addToCart('Sev Puri', 50)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cart Section -->
+    <section id="cartSection" class="cart-section">
+
+        <h2>Your Cart 🛒</h2>
+
+        <div id="cartItems">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <div class="cart-total">
+            Total: ₹<span id="cartTotal">0</span>
+        </div>
+
+        <button id="checkoutButton" class="main-button">
+            Place Order
+        </button>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+
+        <div class="about-content">
+
+            <div>
+                <p class="small-title">ABOUT US</p>
+
+                <h2>Made With Love ❤️</h2>
+
+                <p>
+                    Welcome to Pani Puri Corner, your favorite destination
+                    for delicious Indian street food.
+                </p>
+
+                <p>
+                    We prepare our pani puri and other snacks using
+                    fresh ingredients and traditional flavors.
+                </p>
+
+                <p>
+                    Our food is prepared with care while maintaining
+                    proper hygiene and cleanliness.
+                </p>
+            </div>
+
+            <div class="about-box">
+                <h3>🌶️ Fresh Ingredients</h3>
+                <p>Fresh potatoes, spices, chutneys and crispy puris.</p>
+
+                <h3>🧼 Hygienic Preparation</h3>
+                <p>Clean and hygienic preparation for every customer.</p>
+
+                <h3>❤️ Made Fresh</h3>
+                <p>Prepared fresh so every bite tastes delicious.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact-container">
+
+            <!-- Shop information -->
+            <div class="contact-info">
+
+                <h3>Visit Our Shop</h3>
+
+                <p>📍 Main Street, Guntur, Andhra Pradesh</p>
+
+                <p>📞 +91 98765 43210</p>
+
+                <p>🕒 Open: 11:00 AM - 10:00 PM</p>
+
+            </div>
+
+
+            <!-- Contact Form -->
+            <form id="contactForm" class="contact-form">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Your Phone Number"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Your Message"
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button type="submit" class="main-button">
+                    Send Message
+                </button>
+
+                <!-- Success message -->
+                <p id="successMessage"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Pani Puri Corner | Made with ❤️
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
